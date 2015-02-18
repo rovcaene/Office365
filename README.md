@@ -1,2 +1,2 @@
 # Office365
-Contains Office 365 development projects
+This repository contains Office 365 development projects.
