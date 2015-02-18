@@ -1,0 +1,8 @@
+﻿@if (Request.IsAuthenticated)
+{
+    <text>Hello, @User.Identity.Name!</text>
+}
+else
+{
+    <a href="/Account/SignIn">Sign In</a>
+}

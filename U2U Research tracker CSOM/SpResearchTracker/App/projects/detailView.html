@@ -1,0 +1,14 @@
+﻿<div data-ng-controller="projectDetailView as vm">
+    <h2 class="purple">Project References</h2>
+
+    <ul class="project-list">
+        <li data-ng-repeat="ref in vm.references" data-ng-click="vm.goReference(ref)">
+            <strong>{{ref.Title}}</strong><br />
+            <em>{{ref.Notes}}</em>
+        </li>
+    </ul>
+  
+  <!-- modal dialog used for edit & delete -->
+    <div data-ng-include="'/App/projects/detailEdit.html'"></div>
+  <div data-ng-include="'/App/references/detailEdit.html'"></div>
+</div>
