@@ -1,6 +1,7 @@
 ﻿Project Research Tracker SPA – Sample Setup
 ===========
 This document explains the steps required in order to run the Project Research Tracker reference application.
+This project is based on the [[project|https://github.com/OfficeDev/Research-Project-Code-Sample/tree/master/src/SpResearchTracker]] by Jeremy Thake, but instead of using the SharePoint REST APIs, I'm using the SharePoint Client Side Object Model (CSOM).
 
 ##Prerequisites
 The following things are required in order to run this sample:
