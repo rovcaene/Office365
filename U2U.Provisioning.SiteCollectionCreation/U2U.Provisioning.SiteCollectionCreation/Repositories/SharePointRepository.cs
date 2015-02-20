@@ -86,9 +86,11 @@ namespace U2U.Provisioning.SiteCollectionCreation.Repositories
                         ,
                         Title = siteProperties.Title
                         ,
-                        Owner = siteProperties.Owner
+                        Lcid = siteProperties.Language
                         ,
                         Template = siteProperties.Template
+                        ,
+                        Owner = siteProperties.Owner
                         ,
                         StorageMaximumLevel = siteProperties.StorageMaximumLevel
                         ,
@@ -99,12 +101,12 @@ namespace U2U.Provisioning.SiteCollectionCreation.Repositories
                 SpoOperation operation = tenant.CreateSite(siteCreationProperties);
 
                 // Execute query
-                ctx.ExecuteQuery();
+                await ctx.ExecuteQueryAsync();
 
                 // Reload the site
                 SiteProperties actualSiteProperties = tenant.GetSitePropertiesByUrl(siteProperties.Uri, true);
                 ctx.Load(actualSiteProperties);
-                ctx.ExecuteQuery();
+                await ctx.ExecuteQueryAsync();
 
                 // Set result
                 resultSiteProperties = new model.Site(actualSiteProperties);

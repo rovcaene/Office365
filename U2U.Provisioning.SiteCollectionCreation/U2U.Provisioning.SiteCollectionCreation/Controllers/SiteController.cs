@@ -52,9 +52,11 @@ namespace U2U.Provisioning.SiteCollectionCreation.Controllers
                         ,
                         Uri = collection["uri"]
                         ,
-                        Owner = collection["owner"]
+                        Language = Convert.ToUInt32(collection["language"])
                         ,
                         Template = collection["template"]
+                        ,
+                        Owner = collection["owner"]
                         ,
                         StorageMaximumLevel = Convert.ToInt64(collection["storagemaximumlevel"])
                         ,
